@@ -32,3 +32,6 @@ the dish depends on the `Baker` that was selected.
 Default is that you will receive _bad Macarons_ by the _French baker_.
 This can be changed in the `beans.xml` file, by specifying that alternatives should be used.
 (See the example in the comment there.)
+
+---
+If you choose to change the configuration or the code, please note that you will have to make sure the old version is undeployed (removed) and the new version is deployed afterwards.
