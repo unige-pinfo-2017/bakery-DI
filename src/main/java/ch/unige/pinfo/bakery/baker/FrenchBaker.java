@@ -20,6 +20,10 @@ public class FrenchBaker implements IBaker {
 	@Inject
 	IOven oven;
 
+	/*
+	 * Baking is the activity of putting a dish in the oven and taking it out again.
+	 * (Very simplified)
+	 */
 	@Override
 	public IDish bake() {
 		oven.setDish(new Macaron());
