@@ -33,5 +33,22 @@ Default is that you will receive _bad Macarons_ by the _French baker_.
 This can be changed in the `beans.xml` file, by specifying that alternatives should be used.
 (See the example in the comment there.)
 
+## Interceptors
+
+The project contains two different ways of intercepting a method call.
+The interception code itself is placed in `LoggingInterceptor.java` (package `ch.unige.pinfo.bakery.intercept`).
+
+Using this class, it is possible to specify an interceptor using the `@Interceptors(LoggingInterceptor.class)` annotation, as in `BadOven.java`.
+
+An alternative approach is to use a custom annotation. This approach uses the annotation `@Logged` as declared in `Logged.java`.
+It is necessary to add `@Logged` to the `LoggingInterceptor` class and also to activate it in `beans.xml`.
+Subsequently it is possible to use the interceptor with the annotation, as shown in `GoodOven.java`.
+
 ---
 If you choose to change the configuration or the code, please note that you will have to make sure the old version is undeployed (removed) and the new version is deployed afterwards.
+
+
+---
+#### Problems:
+
+Problems can occur if the project is NOT imported into Eclipse via `Import` -> `Existing Maven Projects`. Please make sure to declare it is a Maven Project.
